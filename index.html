@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ping coming soon page</title>
 </head>
-<body>
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+<body class="page-body">
+  <header class="main-header">
+    <img class="main-header__logo logo" src="./images/main-logo.svg" width="56" height="24" alt="Main logo Ping">
+  </header>
+  <main class="main-page">
+    <h1 class="visually-hidden">Ping coming soon page</h1>
+    <p class="main-page__slogan">We are launching <span class="main-page__slogan-accent">soon!</span></p>
+    <p class="main-page__subscribe-text">Subscribe and get notified</p>
+    <form class="form" method="post">
+      <p class="form__input-wrapper">
+        <input class="form__input-email" type="text" name='email' aria-label="email field" placeholder="Your email address…">
+        </p>
+        <button class="form__button-submit" type="submit">Notify Me</button>
+    </form>
+    <img class="main-page__dashboard" width="320" height="192" src="./images/illustration-dashboard.png" alt="Image dashboard">
+  </main>
+  <footer class="page-footer">
+    <ul class="page-footer__social social">
+      <li class="social__item"><a class="social__link social__link--facebook" href="#">
+      <span class="visually-hidden">Facebook</span></a></li>
+      <li class="social__item"><a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+      <li class="social__item"><a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Instagram</span></a></li>
+    </ul>
+    <p class="footer-page__copyright">&copy; Copyright Ping. All rights reserved.</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
