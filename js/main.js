@@ -7,13 +7,13 @@ const errorMessage = document.createElement('p');
 
 const getValidationEmail = () => {
   if (!REGEXMAIL.test(emailInput.value)) {
-    emailInput.classList.add('form__input-email--invalid');
+    form.classList.add('form--invalid');
 
     errorMessage.classList.add('error-message');
     errorMessage.textContent = 'Please provide a valid email address';
     emailInput.after(errorMessage);
   } else {
-    emailInput.classList.remove('form__input-email--invalid');
+    form.classList.remove('form--invalid');
     errorMessage.remove();
   }
 };
