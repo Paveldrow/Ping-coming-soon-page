@@ -36,7 +36,9 @@ html {
   margin: 0;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
+  
 }
+
 .main-header {
   padding-top: 81px;
   padding-bottom: 32px;
@@ -221,7 +223,7 @@ html {
     max-width: 200px;
     height: 56px;
     font-size: 16px;
-line-height: 19px;
+    line-height: 19px;
   }
 }
 
@@ -277,35 +279,28 @@ line-height: 19px;
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid #e4ebfd;
 }
 
-.social__link--facebook {
-  background-image: url('../images/icon-fb.svg');
-}
-.social__link--facebook:focus,
-.social__link--facebook:hover {
-  background-image: url('../images/icon-fb-hover.svg');
+.social__link:focus,
+.social__link:hover {
+  background-color: #4c7bf3;
+  border: none;
 }
 
-.social__link--twitter {
-  background-image: url('../images/icon-twitter.svg');
-}
-.social__link--twitter:focus,
-.social__link--twitter:hover {
-  background-image: url('../images/icon-twitter-hover.svg');
+.social__icon {
+  fill: #4c7bf3;
 }
 
-.social__link--instagram {
-  background-image: url('../images/icon-instagram.svg');
-}
-.social__link--instagram:focus,
-.social__link--instagram:hover {
-  background-image: url('../images/icon-instagram-hover.svg');
+.social__link:hover .social__icon {
+  fill: #ffffff;
 }
 
 .footer-page__copyright {
