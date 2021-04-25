@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 a {
   text-decoration: none;
 }
@@ -17,7 +24,8 @@ input[type='radio'].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -75,7 +83,7 @@ html {
   background-position: center 256px;
 }
 
-@media (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .main-page {
     background-image: url('../images/image-dashboard-mobile@2x.png');
   }
@@ -89,7 +97,7 @@ html {
     background-position: center 256px;
   }
 
-  @media (min-resolution: 2dppx) {
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
     .main-page {
       background-image: url('../images/image-dashboard-desktop@2x.png');
     }
@@ -136,9 +144,15 @@ html {
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-width: 320px;
   max-width: 515px;
   margin: 0 auto;
@@ -148,8 +162,13 @@ html {
 
 @media (min-width: 710px) {
   .form {
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 637px;
     padding: 0;
   }
@@ -167,10 +186,12 @@ html {
   margin-bottom: 10px;
   padding-right: 32px;
   padding-left: 32px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #ffffff;
   border: 1px solid #c2d3ff;
-  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
+          box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
   border-radius: 28px;
   font-size: 12px;
   line-height: 20px;
@@ -185,6 +206,22 @@ html {
     height: 56px;
     font-size: 16px;
   }
+}
+
+.form__input-email::-webkit-input-placeholder {
+  color: #b8c7ed;
+}
+
+.form__input-email::-moz-placeholder {
+  color: #b8c7ed;
+}
+
+.form__input-email:-ms-input-placeholder {
+  color: #b8c7ed;
+}
+
+.form__input-email::-ms-input-placeholder {
+  color: #b8c7ed;
 }
 
 .form__input-email::placeholder {
@@ -237,7 +274,8 @@ html {
   font-size: 12px;
   line-height: 16px;
   background: #4c7bf3;
-  box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+          box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
   border: none;
   border-radius: 28px;
   outline: none;
@@ -283,7 +321,9 @@ html {
 .page-footer__social {
   margin: 0 auto;
   margin-bottom: 27px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 710px) {
@@ -293,6 +333,8 @@ html {
 }
 
 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   margin-bottom: 27px;
@@ -305,10 +347,17 @@ html {
 }
 
 .social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -319,6 +368,8 @@ html {
 .social__link:hover {
   background-color: #4c7bf3;
   border: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
